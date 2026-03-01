@@ -56,7 +56,7 @@ const Header = () => {
         <div className="flex gap-2 items-center justify-center md:gap-6 mb-3">
           <div className="text-xs px-4 md:px-8 py-2.5 md:text-lg md:flex border-gray-500 dark:border-gray-400 rounded-full border text-gray-900 dark:text-gray-100 hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300">
             <Link
-              href="#"
+              href="#contact"
               className="flex items-center gap-3" 
             >
              <b>Contact</b> <ArrowRight className="cursor-pointer" size={16} />
