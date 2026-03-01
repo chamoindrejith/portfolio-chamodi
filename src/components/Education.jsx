@@ -41,8 +41,8 @@ const Education = () => {
       id="education"
       className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center"
     >
-      <h4 className="text-center mb-2 text-lg geistMono">Education</h4>
-      <h2 className="text-center text-5xl geistMono">
+      <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Education</h4>
+      <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
         Where <span className="text-orange-500"> I </span> learnt
       </h2>
 
@@ -54,18 +54,18 @@ const Education = () => {
               <Card
                 key={index}
                 size="sm"
-                className="bg-gray-50/70 mx-auto w-11/12 max-w-sm hover:translate-1 hover:shadow-orange-100 hover:scale-105 hover:bg-gray-100 transition-all duration-300"
+                className="bg-gray-50/70 dark:bg-gray-800/50 dark:border-gray-700 mx-auto w-11/12 max-w-sm hover:translate-1 hover:shadow-orange-100 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 <CardHeader>
-                  <CardTitle className="flex gap-4">
+                  <CardTitle className="flex gap-4 text-gray-900 dark:text-gray-100">
                     <IconComponent className="text-orange-500" size={24} />
                     {category.institution}
                   </CardTitle>
-                  <CardDescription className="text-sm mt-2">{category.period}</CardDescription>
+                  <CardDescription className="text-sm mt-2 text-gray-700 dark:text-gray-300">{category.period}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm">{category.degree}</p>
-                  <p className="text-xs mt-2 text-gray-500">{category.status}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">{category.degree}</p>
+                  <p className="text-xs mt-2 text-gray-500 dark:text-gray-400">{category.status}</p>
                 </CardContent>
               </Card>
             );

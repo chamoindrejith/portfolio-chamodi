@@ -121,8 +121,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-white text-foreground; 
+    @apply bg-white dark:bg-gray-950 text-foreground; 
     background-image:radial-gradient(#e5e7eb 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+  .dark body {
+    background-image:radial-gradient(#232b37 1px, transparent 1px);
   }
 }

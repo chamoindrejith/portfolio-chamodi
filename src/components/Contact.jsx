@@ -52,11 +52,11 @@ const contact = () => {
       id="contact"
       className="w-full sm:px-[10%] lg:px-[15%] mt-10 mb-10 py-16 md:py-10 scroll-mt-20 items-center justify-center"
     >
-      <h4 className="text-center mb-2 text-lg geistMono">Get In Touch</h4>
-      <h2 className="text-center text-5xl geistMono">
+      <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Get In Touch</h4>
+      <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
         I'd love to <span className="text-orange-500">hear from you!</span>
       </h2>
-      <p className="text-center mt-4 text-gray-700">
+      <p className="text-center mt-4 text-gray-700 dark:text-gray-400">
         If you have any inquiries or just want to say hi, feel free to reach
         out!
       </p>
@@ -69,7 +69,7 @@ const contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-600 focus:border-gray-500 dark:focus:border-orange-500"
                 id="fname"
                 name="fname"
                 type="text"
@@ -79,7 +79,7 @@ const contact = () => {
             </div>
             <div className="w-full md:w-1/2 px-3">
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-600 focus:border-gray-500 dark:focus:border-orange-500"
                 id="lname"
                 name="lname"
                 type="text"
@@ -91,7 +91,7 @@ const contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-600 focus:border-gray-500 dark:focus:border-orange-500"
                 id="email"
                 name="email"
                 type="email"
@@ -103,7 +103,7 @@ const contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <textarea
-                className="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-300 border border-gray-200 dark:border-gray-600 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-600 focus:border-gray-500 dark:focus:border-orange-500"
                 id="message"
                 name="message"
                 placeholder="Your Message"
@@ -113,7 +113,7 @@ const contact = () => {
           </div>
           <div className="flex items-center justify-center">
             <button
-              className="md:flex text-xs px-4 md:px-8 py-2.5 md:text-lg bg-white border-2 border-gray-900 rounded-full hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300"
+              className="md:flex text-xs px-4 md:px-8 py-2.5 md:text-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 border-2 border-gray-900 dark:border-gray-400 rounded-full hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300"
               type="submit"
             >
               Send Message
@@ -135,25 +135,25 @@ const contact = () => {
           )}
         </form>
       </div>
-      <div>
-        <div className="flex items-center justify-center gap-6 mt-10">
-          <Link
-            href="https://www.linkedin.com/in/chamodi-indrejith/"
-            target="_blank"
-            className="text-gray-700 hover:text-white transition-colors duration-300 flex items-center gap-4 border-2 rounded-md px-4 py-2 hover:border-orange-500 hover:bg-orange-500 hover:transition-all hover:duration-300"
-          >
-             <Linkedin size={24} /> 
-             <p className="text-s">/chamodi-indrejith</p>
-          </Link>
-          <Link
-            href="https://www.github.com/chamoindrejith"
-            target="_blank"
-            className="text-gray-700 hover:text-white transition-colors duration-300 flex items-center gap-4 border-2 rounded-md px-4 py-2 hover:border-orange-500 hover:bg-orange-500 hover:transition-all hover:duration-300"
-          >
-            <Github size={24} />
-            <p className="text-s">/chamoindrejith</p>
-          </Link>
-        </div>
+      <div className="w-full flex flex-wrap px-auto mt-20 gap-6 items-center justify-center">
+       <div>
+        <Link
+          href="https://www.linkedin.com/in/chamodi-indrejith/"
+          target="_blank"
+          className="text-gray-700 dark:text-gray-300 hover:text-white transition-colors duration-300 mb-6 flex items-center gap-4 border-2 border-gray-700 dark:border-gray-400 rounded-md px-4 py-2 hover:border-orange-500 hover:bg-orange-500 hover:transition-all hover:duration-300"
+        >
+          <Linkedin size={24} />
+          <p className="text-s">/chamodi-indrejith</p>
+        </Link>
+        <Link
+          href="https://www.github.com/chamoindrejith"
+          target="_blank"
+          className="text-gray-700 dark:text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-4 border-2 border-gray-700 dark:border-gray-400 rounded-md px-4 py-2 hover:border-orange-500 hover:bg-orange-500 hover:transition-all hover:duration-300"
+        >
+          <Github size={24} />
+          <p className="text-s">/chamoindrejith</p>
+        </Link>
+      </div>
       </div>
     </div>
   );

@@ -51,10 +51,10 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70"
+      className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70 dark:bg-gray-900/50"
     >
-      <h4 className="text-center mb-2 text-lg geistMono">Featured Projects</h4>
-      <h2 className="text-center text-5xl geistMono">
+      <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Featured Projects</h4>
+      <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
         My <span className="text-orange-500">Portfolio</span>
       </h2>
       <div className="w-full mt-20 flex flex-col items-center justify-center">
@@ -65,21 +65,21 @@ const Projects = () => {
               <Card
                 key={index}
                 size="sm"
-                className="bg-gray-50/70 mx-auto w-11/12 max-w-sm hover:translate-1 hover:shadow-orange-100 hover:scale-105 hover:bg-gray-100 transition-all duration-300"
+                className="bg-gray-50/70 dark:bg-gray-800/50 dark:border-gray-700 mx-auto w-11/12 max-w-sm hover:translate-1 hover:shadow-orange-100 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 <CardHeader>
-                  <CardTitle className="flex gap-4">
+                  <CardTitle className="flex gap-4 text-gray-900 dark:text-gray-100">
                     <IconComponent className="text-orange-500" size={24} />
                     {category.title}
                   </CardTitle>
-                  <CardDescription className="text-sm mt-2">{category.description}</CardDescription>
+                  <CardDescription className="text-sm mt-2 text-gray-700 dark:text-gray-300">{category.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex-1 flex-wrap gap-2">
                     {" "}
                     {category.tech.map((skill, idx) => (
                       <div
-                        className="inline-flex px-6 py-2 m-2 shadow-md rounded-full text-sm hover:bg-gray-800 hover:text-white hover:transition-all hover:duration-300"
+                        className="inline-flex px-6 py-2 m-2 shadow-md rounded-full text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 hover:bg-gray-800 hover:text-white dark:hover:bg-orange-500 hover:transition-all hover:duration-300"
                         key={idx}
                       >
                         {skill}
@@ -87,7 +87,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <Button variant="outline" className="mt-4 w-full hover:bg-orange-500 hover:text-white" href={category.link}> 
+                  <Button variant="outline" className="mt-4 w-full hover:bg-orange-500 hover:text-white dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600" href={category.link}> 
                     View Project <ArrowUpRight/>
                   </Button>
                 </CardContent>

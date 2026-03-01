@@ -3,12 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import { assets } from "../../assets/assets";
-import { ArrowRight, Sun, X, TextAlignEnd } from "lucide-react";
+import { ArrowRight, Sun, Moon, X, TextAlignEnd } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const sideMenuRef = useRef();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +30,17 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    if (!isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
   };
@@ -27,17 +50,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full grid-cols-6 fixed flex px-5 lg:px-10 xl:px-[10%] py-6 justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 shadow-md" : ""}`}>
+      <nav className={`w-full grid-cols-6 fixed flex px-5 lg:px-10 xl:px-[10%] py-6 justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 dark:bg-gray-950/90 shadow-md" : ""}`}>
         <Link href="">
           <Image
-            src={assets.logo}
+            src={isDarkMode ? assets.logoDark : assets.logo}
             width={200}
             className="max-w-full cursor-pointer mr-14"
             alt=""
           />
         </Link>
 
-        <ul className="hidden md:flex col-span-3 items-center gap-10 lg:gap-10 rounded-full py-3">
+        <ul className="hidden md:flex col-span-3 items-center gap-10 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
             <Link className="font-sans" href="#top">
               Home
@@ -61,10 +84,17 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          <Button className=" flex w-10 h-10 bg-transparent hover:bg-transparent">
-            <Sun className="cursor-pointer text-gray-900" size={40} />
+          <Button 
+            onClick={toggleDarkMode}
+            className="flex w-10 h-10 bg-transparent hover:bg-transparent"
+          >
+            {isDarkMode ? (
+              <Moon className="cursor-pointer text-gray-900 dark:text-yellow-50" size={40} />
+            ) : (
+              <Sun className="cursor-pointer text-gray-900" size={40} />
+            )}
           </Button>
-          <div className="hidden md:flex ml-5 px-4 md:px-8 py-2.5 border-gray-500 rounded-full border hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300">
+          <div className="hidden md:flex ml-5 px-4 md:px-8 py-2.5 border-gray-500 dark:border-gray-400 rounded-full border text-gray-900 dark:text-gray-100 hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300">
             <Link href="#contact" className="flex items-center gap-3">
               <b>Contact</b> <ArrowRight className="cursor-pointer" size={16} />
             </Link>
@@ -73,7 +103,7 @@ const Navbar = () => {
             className="md:hidden w-10 h-10 bg-transparent hover:bg-transparent"
             onClick={openMenu}
           >
-            <TextAlignEnd className="cursor-pointer text-gray-900" size={24} />
+            <TextAlignEnd className="cursor-pointer text-gray-900 dark:text-gray-100" size={24} />
           </Button>
         </div>
 
@@ -104,6 +134,9 @@ const Navbar = () => {
           </li>
           <li onClick={closeMenu}>
             <Link href="#volunteer">Volunteer</Link>
+          </li>
+          <li onClick={closeMenu}>
+            <Link href="#contactnb ">Contact</Link>
           </li>
         </ul>
       </nav>

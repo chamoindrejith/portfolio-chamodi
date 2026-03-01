@@ -49,12 +49,12 @@ const Volunteer = () => {
   return (
     <div
       id="volunteer"
-      className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70"
+      className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70 dark:bg-gray-900/50"
     >
-      <h4 className="text-center mb-2 text-lg geistMono">
+      <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">
         Volunteer Experience
       </h4>
-      <h2 className="text-center text-5xl geistMono">
+      <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
         My <span className="text-orange-500">Volunteer</span> Work
       </h2>
 
@@ -69,18 +69,18 @@ const Volunteer = () => {
                 <Card
                   key={index}
                   size="md"
-                  className="bg-gray-50/70 mx-auto w-11/12 max-w-md hover:shadow-orange-100 hover:translate-1 hover:scale-105 hover:bg-gray-100 transition-all duration-300"
+                  className="bg-gray-50/70 dark:bg-gray-800/50 dark:border-gray-700 mx-auto w-11/12 max-w-md hover:shadow-orange-100 hover:translate-1 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
                 >
                   
                   <CardHeader>
-                    <CardTitle className="flex gap-4">
+                    <CardTitle className="flex gap-4 text-gray-900 dark:text-gray-100">
                       {experience.organization}
                     </CardTitle>
-                    <CardDescription className="text-sm mt-2 ">
+                    <CardDescription className="text-sm mt-2 text-gray-700 dark:text-gray-300">
                       {experience.period}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="text-sm">
+                  <CardContent className="text-sm text-gray-700 dark:text-gray-300">
                     {experience.role}
                   </CardContent>
                 </Card>

@@ -5,8 +5,8 @@ import { Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="w-full mt-10 py-4 md:py-6 items-center justify-center flex flex-col gap-4  bg-gray-50/70 shadow-[0_-6px_24px_-16px_rgba(0,0,0,0.45)]">
-      <div className="text-justify text-sm text-gray-500">
+    <div className="w-full mt-10 py-4 md:py-6 items-center justify-center flex flex-col gap-4  bg-gray-50/70 dark:bg-gray-900/50 shadow-[0_-6px_24px_-16px_rgba(0,0,0,0.45)]">
+      <div className="text-justify text-sm text-gray-500 dark:text-gray-400">
         <p>&copy; 2026 Chamodi Indrejith. All rights reserved.</p>
       </div>
       <div className="flex gap-4 items-center justify-center">
