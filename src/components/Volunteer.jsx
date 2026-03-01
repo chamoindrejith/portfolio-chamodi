@@ -49,7 +49,7 @@ const Volunteer = () => {
   return (
     <div
       id="volunteer"
-      className="w-full sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70 dark:bg-gray-900/50"
+      className="w-full px-5 sm:px-[10%] lg:px-[15%] mt-20 mb-20 py-16 md:py-20 scroll-mt-20 items-center justify-center  bg-gray-50/70 dark:bg-gray-900/50"
     >
       <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">
         Volunteer Experience

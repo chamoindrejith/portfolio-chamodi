@@ -50,7 +50,7 @@ const contact = () => {
   return (
     <div
       id="contact"
-      className="w-full sm:px-[10%] lg:px-[15%] mt-10 mb-10 py-16 md:py-10 scroll-mt-20 items-center justify-center"
+      className="w-full px-5 sm:px-[10%] lg:px-[15%] mt-10 mb-10 py-16 md:py-10 scroll-mt-20 items-center justify-center"
     >
       <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Get In Touch</h4>
       <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">

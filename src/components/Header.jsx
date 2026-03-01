@@ -37,7 +37,7 @@ const Header = () => {
       >
         <div className="w-8 h-8 bg-orange-500 rounded-full blur-xl opacity-60"></div>
       </div>
-      <div className="w-11/12 max-w-3xl text-center">
+      <div className="px-5 max-w-3xl text-center">
         <Image
           src={assets.Chamodi}
           alt=""

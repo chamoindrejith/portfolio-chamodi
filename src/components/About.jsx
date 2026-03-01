@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full px-[15%] scroll-mt-20 h-full md:h-screen py-20 mb-20 flex flex-col items-center justify-center bg-gray-50/70 dark:bg-gray-900/50"
+      className="w-full px-5 sm:px-[10%] lg:px-[15%] scroll-mt-20 h-full md:h-screen py-20 mb-20 flex flex-col items-center justify-center bg-gray-50/70 dark:bg-gray-900/50"
     >
       <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Introduction</h4>
       <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">Who <span className="text-orange-500"> I</span> Am</h2>

@@ -86,7 +86,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="w-full sm:px-[10%] lg:px-[15%] mt-20 py-16 md:py-20 scroll-mt-20 items-center justify-center"
+      className="w-full px-5 sm:px-[10%] lg:px-[15%] mt-20 py-16 md:py-20 scroll-mt-20 items-center justify-center"
     >
       <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Skills & Strengths</h4>
       <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
