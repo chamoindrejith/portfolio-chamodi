@@ -60,7 +60,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="hidden md:flex col-span-3 items-center gap-10 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
+        <ul className="hidden lg:flex col-span-3 items-center gap-6 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
             <Link className="font-sans" href="#top">
               Home
@@ -94,13 +94,13 @@ const Navbar = () => {
               <Sun className="cursor-pointer text-gray-900" size={40} />
             )}
           </Button>
-          <div className="hidden md:flex ml-5 px-4 md:px-8 py-2.5 border-gray-500 dark:border-gray-400 rounded-full border text-gray-900 dark:text-gray-100 hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300">
+          <div className="hidden lg:flex ml-5 px-4 md:px-8 py-2.5 border-gray-500 dark:border-gray-400 rounded-full border text-gray-900 dark:text-gray-100 hover:bg-gray-800 hover:text-white hover:border-white hover:transition-all hover:duration-300">
             <Link href="#contact" className="flex items-center gap-3">
               <b>Contact</b> <ArrowRight className="cursor-pointer" size={16} />
             </Link>
           </div>
           <Button
-            className="md:hidden w-10 h-10 bg-transparent hover:bg-transparent"
+            className="lg:hidden w-10 h-10 bg-transparent hover:bg-transparent"
             onClick={openMenu}
           >
             <TextAlignEnd className="cursor-pointer text-gray-900 dark:text-gray-100" size={24} />
