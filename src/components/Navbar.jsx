@@ -60,7 +60,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="hidden lg:flex col-span-3 items-center gap-6 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
+        <ul className="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
             <Link className="font-sans" href="#top">
               Home
