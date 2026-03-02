@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full grid-cols-6 fixed flex px-5 lg:px-10 xl:px-[10%] py-6 justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 dark:bg-gray-950/90 shadow-md" : ""}`}>
+      <nav className={`w-full whitespace-nowrap shrink-0 grid-cols-6 fixed flex px-5 lg:px-10 xl:px-[10%] py-6 justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 dark:bg-gray-950/90 shadow-md" : ""}`}>
         <Link href="">
           <Image
             src={isDarkMode ? assets.logoDark : assets.logo}
