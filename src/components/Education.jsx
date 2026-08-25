@@ -11,27 +11,24 @@ import { GraduationCap } from "lucide-react";
 const education = [
   {
     institution: "University of Vavuniya",
-    degree: "BSc. (Hons) in Information Technology",
-    status: "Reading",
-    period: "2022 – Present",
+    degree: "BSc (Hons) in Information Technology",
+    status: "First Class, GPA 3.810/4.00",
+    period: "2022 – 2026 (Expected)",
+    note: "Current academic programme with relevant coursework in project management, HCI, software engineering, QA, web programming, e-commerce, and database management.",
   },
   {
-    institution: "IMBS Green University",
+    institution: "IMBS Green Campus",
     degree: "Diploma in Human Resource Management",
     status: "Reading",
     period: "2025 – Present",
+    note: "Currently reading this diploma while continuing academic and professional work.",
   },
   {
-    institution: "University of Colombo School of Computing",
+    institution: "University of Colombo School of Computing (UCSC)",
     degree: "Higher National Diploma (HND) in Information Technology",
     status: "Completed",
     period: "2021 – 2023",
-  },
-  {
-    institution: "Esoft Metro Campus",
-    degree: "Diploma in English",
-    status: "Completed",
-    period: "2020 – 2021",
+    note: "Foundation for advanced studies in information technology and software practice.",
   },
 ];
 
@@ -43,7 +40,7 @@ const Education = () => {
     >
       <h4 className="text-center mb-2 text-lg geistMono text-gray-900 dark:text-gray-100">Education</h4>
       <h2 className="text-center text-5xl geistMono text-gray-900 dark:text-gray-100">
-        Where <span className="text-orange-500"> I </span> learnt
+        Where <span className="text-orange-500">I learnt</span>
       </h2>
 
       <div className="w-full mt-20 flex flex-col items-center justify-center">
@@ -54,7 +51,7 @@ const Education = () => {
               <Card
                 key={index}
                 size="sm"
-                className="bg-gray-50/70 dark:bg-gray-800/50 dark:border-gray-700 mx-auto w-11/12 max-w-sm hover:translate-1 hover:shadow-orange-100 hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
+                className="bg-gray-50/70 dark:bg-gray-800/50 dark:border-gray-700 mx-auto w-11/12 max-w-sm hover:translate-y-[-4px] hover:shadow-orange-100 hover:scale-[1.01] hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 <CardHeader>
                   <CardTitle className="flex gap-4 text-gray-900 dark:text-gray-100">
@@ -65,7 +62,8 @@ const Education = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-700 dark:text-gray-300">{category.degree}</p>
-                  <p className="text-xs mt-2 text-gray-500 dark:text-gray-400">{category.status}</p>
+                  <p className="text-xs mt-2 font-medium text-gray-500 dark:text-gray-400">{category.status}</p>
+                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">{category.note}</p>
                 </CardContent>
               </Card>
             );

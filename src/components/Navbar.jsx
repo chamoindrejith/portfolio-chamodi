@@ -62,7 +62,7 @@ const Navbar = () => {
 
         <ul className="hidden lg:flex flex-1 items-center justify-center gap-6 lg:gap-10 rounded-full py-3 text-gray-900 dark:text-gray-100">
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
-            <Link className="font-sans" href="#top">
+            <Link className="font-sans" href="/">
               Home
             </Link>
           </li>
@@ -70,16 +70,22 @@ const Navbar = () => {
             <Link href="#about">Who I Am</Link>
           </li>
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
-            <Link href="#skills">Skills</Link>
-          </li>
-          <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
-            <Link href="#projects">Projects</Link>
+            <Link href="#experience">Experience</Link>
           </li>
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
             <Link href="#education">Education</Link>
           </li>
           <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
+            <Link href="#research">Research</Link>
+          </li>
+          <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
+            <Link href="#projects">Projects</Link>
+          </li>
+          <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
             <Link href="#volunteer">Volunteer</Link>
+          </li>
+          <li className="hover:underline hover:underline-offset-20 hover:decoration-orange-500 hover:decoration-4 hover:transition-all hover:duration-300">
+            <Link href="#skills">Skills</Link>
           </li>
         </ul>
 
@@ -116,7 +122,7 @@ const Navbar = () => {
             <X size={16} className="cursor-pointer" />
           </div>
           <li onClick={closeMenu}>
-            <Link className="font-sans" href="#top">
+            <Link className="font-sans" href="/">
               Home
             </Link>
           </li>
@@ -124,19 +130,25 @@ const Navbar = () => {
             <Link href="#about">Who I Am</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link href="#skills">Skills</Link>
-          </li>
-          <li onClick={closeMenu}>
-            <Link href="#projects">Projects</Link>
+            <Link href="#experience">Experience</Link>
           </li>
           <li onClick={closeMenu}>
             <Link href="#education">Education</Link>
           </li>
           <li onClick={closeMenu}>
+            <Link href="#research">Research</Link>
+          </li>
+          <li onClick={closeMenu}>
+            <Link href="#projects">Projects</Link>
+          </li>
+          <li onClick={closeMenu}>
             <Link href="#volunteer">Volunteer</Link>
           </li>
           <li onClick={closeMenu}>
-            <Link href="#contactnb ">Contact</Link>
+            <Link href="#skills">Skills</Link>
+          </li>
+          <li onClick={closeMenu}>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
       </nav>

@@ -32,7 +32,7 @@ const skillCategories = [
   {
     icon: GitBranch,
     title: "Tools & Workflow",
-    skills: ["Git", "GitHub"],
+    skills: ["Git", "GitHub", "ClickUp", "VS Code", "Postman"],
   },
   {
     icon: Crown,
